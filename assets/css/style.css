@@ -1,0 +1,69 @@
+body{
+    background-color: #330033;
+}
+
+.backdrop{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    animation: fade-In .4s ease-in;
+}
+
+.backdrop.visible{
+    display: block;
+}
+
+.ourModal{
+    width: 60%;
+    position: fixed;
+    left: 20%;
+    top: 22vh;
+    display: none;
+    animation: fade-slide-down .4s ease-in-out;
+}
+
+.ourModal.visible{
+    display: block;
+}
+
+.closeBtn{
+    cursor: pointer;
+}
+
+.movieCard h3{
+    text-transform: capitalize;
+}
+
+.movieCard small{
+    font-size: 16px;
+}
+
+.movieCard img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+@keyframes fade-In{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fade-slide-down{
+    0%{
+        opacity: 0;
+        margin-top: -60%;
+    }
+    100%{
+        opacity: 1;
+        margin-top: 0;
+    }
+}
